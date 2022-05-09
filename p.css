@@ -1,0 +1,444 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.dotted-hr{
+    border: dotted 6px whitesmoke;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+
+a{
+    color: aliceblue;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+/* navbaer start */
+
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+
+/* for mobile */
+[class*="col-"]{
+    width: 100%;
+}
+
+.navbar{
+    background-color: #40868b;
+    padding: 1% 7%;
+    text-align: center;
+}
+
+.navbar-logo{
+    background-color: #40868b;
+}
+
+.navbar h1{
+    color: aliceblue;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.navbar-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+ 
+.navbar-menu a{
+    background-color: #0c6168;
+    border-radius: 10px;
+    margin: 7px 0px;
+    padding: 10px;
+}
+
+.navbar-menu a:hover{
+    background-color: gray;
+}
+ 
+
+.navbar::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* navber end */
+
+/* profile start here */
+
+.profile{
+    padding: 130px 10px;
+    position: relative;
+    text-align: center;
+}
+
+.profile .top-weather-icon{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    transition: transform 2s;
+}
+.profile .top-weather-icon:hover{
+    transform: rotate(360deg);
+}
+
+
+.profile-desc h1{
+    font-family: 'satisfy', cursive;
+    font-size: 3rem;
+}
+
+
+.profile-desc p{
+    color: gray;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    width: 50%;
+    
+}
+
+
+.profile .bottom-weather-icon{
+    position: absolute;
+    left: 60px;
+    bottom: 10px;
+    transition: transform 2s;
+}
+.profile .bottom-weather-icon:hover{
+    transform: rotate(360deg);
+}
+
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+/* profile end here */
+
+/* about me starts */
+
+.about-me{
+    background-color: #39a4ac;
+    padding: 1% 7%;
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.about-me::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+.aboutme-image img{
+    border: 5px solid whitesmoke;
+    border-radius: 50%;
+    height: 400px;
+    width: 300px;
+
+}
+
+.about-me p{
+    text-align: center;
+}
+
+.about-me a{
+    font-size: 1.2rem;
+}
+/* about me ends */
+
+
+/* professional-starts */
+
+.professional-experience{
+    padding: 1% 0%;
+
+}
+
+.professional-experience .card{
+    background-color: #a39e9e;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.3s;
+    height: 700px;
+    
+}
+
+ .card:hover{
+    box-shadow: 0 4px 8px 5px black;
+}
+
+.card-icon{
+    text-align: center;
+
+}
+
+.card-icon img{
+    margin-top: 20px;
+    width: 100px;
+
+}
+
+.rounded-img{
+    border: 5px solid white;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.card-title h2{
+    background-color: #616161;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.skills-container{
+    padding-right: 45px;
+}
+
+.skills-container li{
+    list-style: none;
+    font-weight: bolder;
+    margin: 30px 10px;
+    position: relative;
+    text-transform: uppercase;
+    
+}
+
+.skills-container li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgb(0,255,255,.5);
+  
+}
+.skills-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+
+
+    width: 0;
+    height: 10px;
+    background-color: rgb(0,255,255);
+
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  
+}
+
+.skills-container li.html::after{
+    animation-name: html;
+}
+.skills-container li.c::after{
+    animation-name: c;
+}
+.skills-container li.java::after{
+    animation-name: java;
+}
+.skills-container li.python::after{
+    animation-name: python;
+}
+.skills-container li.css::after{
+    animation-name: css;
+}
+.skills-container li.bootstrap::after{
+    animation-name: bootstrap;
+}
+.skills-container li.js::after{
+    animation-name: javascript;
+}
+.skills-container li.git::after{
+    animation-name: git;
+}
+.skills-container li.nodejs::after{
+    animation-name: nodejs;
+}
+
+@keyframes html{
+    to{
+        width: 90%;
+    }
+}
+@keyframes c{
+    to{
+        width: 90%;
+    }
+}
+@keyframes python{
+    to{
+        width: 60%;
+    }
+}
+@keyframes css{
+    to{
+        width: 80%;
+    }
+}
+@keyframes bootstrap{
+    to{
+        width: 60%;
+    }
+}
+@keyframes javascript{
+    to{
+        width: 20%;
+    }
+}
+@keyframes git{
+    to{
+        width: 50%;
+    }
+}
+@keyframes nodejs{
+    to{
+        width: 60%;
+    }
+}
+@keyframes java{
+    to{
+        width: 90%;
+    }
+}
+
+
+.professional-experience::after{
+    clear: both;
+    display: table;
+    content: '';
+
+
+}
+
+/* professional-ends */
+
+/* achievement-contact starts from here  */
+.achievemnet-contact{
+    padding: 1% 7%;
+    background-color: #39a4ac;
+    color: white;
+}
+
+.contact{
+    text-align: center;
+}
+
+.contact input, textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact button{
+    border: none;
+    border-radius: 12px;
+    background-color: #052d2f;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    width: 100px;
+}
+
+.contact button:hover{
+    background-color: black;
+    color: red;
+}
+
+
+.contact-links{
+    text-align: center;
+}
+
+.media-buttons .btn{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    background-color: white;
+}
+.btn:hover{
+    background-color: gray;
+}
+
+.achievemnet-contact::after{
+    clear: both;
+    display: table;
+    content: '';
+ }
+
+/* achievement-contact ends here  */
+
+/* footer starts from here  */
+.footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+
+}
+
+.footer-menu a{
+    display: block;
+    margin: 15px 0;
+    font-size: 1rem;
+}
+
+.footer-menu a:hover{
+    color: gray;
+}
+
+.footer::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+
+/* footer ends from here  */
+
+
+
